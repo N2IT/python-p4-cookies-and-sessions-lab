@@ -32,7 +32,6 @@ def index_articles():
 
 @app.route('/articles/<int:id>', methods=['GET'])
 def show_article(id):
-    breakpoint()
     if 'page_views' not in session:
         session['page_views'] = 0
     session['page_views'] += 1
